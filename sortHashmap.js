@@ -8,10 +8,10 @@ function sortMapByValue(map) {
 
 // Example usage
 let myMap = new Map([
-  [101, "John Doe"],
-  [102, "Jane Smith"],
-  [103, "Peter Johnson"],
+  [101, "Rajasekar"],
+  [102, "Siva Prakasam"],
+  [103, "Rahul"],
 ]);
 
-let sortedMap = sortMapByValue(myMap);
+const sortedMap = sortMapByValue(myMap);
 console.log(sortedMap);

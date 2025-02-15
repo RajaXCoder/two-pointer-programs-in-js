@@ -2,7 +2,7 @@ class ImmutableEmployee {
   constructor(name, id, dateOfJoining, addresses) {
     this._name = name;
     this._id = id;
-    this._dateOfJoining = new Date(dateOfJoining.getTime()); // Deep copy of Date
+    this._dateOfJoining = dateOfJoining.toLocaleString("en-GB");
     this._addresses = addresses.map(
       (addr) => new Address(addr.city, addr.state)
     ); // Proper deep copy
@@ -41,6 +41,7 @@ class Address {
 const addresses = [
   new Address("Chennai", "Tamil Nadu"),
   new Address("Bangalore", "Karnataka"),
+  new Address("Kochi", "Kerala"),
 ];
 
 const emp = new ImmutableEmployee("Rajasekar", "EMP123", new Date(), addresses);
